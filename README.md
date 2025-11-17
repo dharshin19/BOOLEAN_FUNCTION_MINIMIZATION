@@ -33,18 +33,39 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+  Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:*/
+Developed by:DHARSHIN M
+RegisterNumber: 25018496
+```
+module Boolean_min(A,B,C,D,W,X,Y,Z,F1,F2);
+input A,B,C,D,W,X,Y,Z;
+wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
+output F1,F2;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign x6=(X)&(~Y)&(Z);
+assign x7=(~X)&(~Y)&(Z);
+assign x8=(~W)&(X)&(Y);
+assign x9=(W)&(~X)&(Y);
+assign x10=(W)&(X)&(Y);
+assign F1=x1|x2|x3|x4|x5;
+assign F2=x6|x7|x8|x9|x10;
+endmodule
+```
 
 
 **RTL realization**
+<img width="1920" height="1080" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/188d7f6f-1b9e-4082-b64c-bc2136ceae0c" />
+
 
 **Output:**
+<img width="1920" height="1080" alt="Screenshot (22)" src="https://github.com/user-attachments/assets/d1f48c5f-3bbc-493c-bc68-773262702688" />
 
-**RTL**
 
-**Timing Diagram**
 
 **Result:**
 
